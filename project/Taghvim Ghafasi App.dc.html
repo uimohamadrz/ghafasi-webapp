@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:#14100e;font-family:'Vazirmatn',sans-serif;-webkit-font-smoothing:antialiased}
+  [data-scroll]{scrollbar-width:none}
+  [data-scroll]::-webkit-scrollbar{display:none}
+  input::placeholder{color:rgba(90,12,19,.45)}
+  @keyframes pulseGlow{0%,100%{filter:drop-shadow(0 0 0 currentColor)}50%{filter:drop-shadow(0 6px 22px currentColor)}}
+  @keyframes shineSweep{0%{transform:translateX(-130%) skewX(-18deg)}60%,100%{transform:translateX(140%) skewX(-18deg)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  @keyframes spinSlow{to{transform:rotate(360deg)}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;box-sizing:border-box;padding:46px 24px;background:radial-gradient(80% 60% at 50% 0%,#2a1010 0%,#14100e 62%);display:flex;justify-content:center;align-items:flex-start">
+  <div style="width:392px;height:846px;border-radius:52px;background:linear-gradient(#191919,#0c0c0c);padding:11px;box-shadow:0 50px 90px -28px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.05) inset;flex:none">
+    <div style="position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;background:radial-gradient(130% 100% at 50% 0%,#8C1620 0%,#6E0F18 70%);direction:rtl;font-family:'Vazirmatn',sans-serif">
+
+      <!-- notch -->
+      <div style="position:absolute;top:12px;left:50%;transform:translateX(-50%);width:128px;height:30px;background:#000;border-radius:0 0 18px 18px;z-index:40"></div>
+      <!-- status bar -->
+      <div style="position:absolute;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:16px 26px 0;font-weight:700;font-size:15px;color:#F6ECD6;pointer-events:none">
+        <span>۸:۰۰</span>
+        <span style="display:flex;gap:5px;align-items:center;opacity:.85"><span style="width:18px;height:11px;border:1.5px solid #F6ECD6;border-radius:3px;display:inline-block"></span><span style="width:3px;height:11px;background:#F6ECD6;border-radius:1px;display:inline-block"></span></span>
+      </div>
+
+      <!-- ===================== HOME ===================== -->
+      <div data-view="home" style="position:absolute;inset:0;z-index:2;opacity:1;transform:none;pointer-events:auto;transition:opacity .42s ease,transform .42s ease;padding-top:46px;display:flex;flex-direction:column;color:#F6ECD6">
+        <div data-screen="home" style="display:flex;flex-direction:column;flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 24px 14px">
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <div style="font-weight:900;font-size:21px;letter-spacing:-.5px">تقویم قفسی</div>
+              <div style="font-weight:500;font-size:12px;color:rgba(246,236,214,.55)">امروز چندمه؟</div>
+            </div>
+            <div style="background:#F6ECD6;color:#7A111B;font-weight:900;font-size:16px;padding:9px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.35)">سه‌شنبه</div>
+          </div>
+          <div style="margin:6px 20px 0;border-radius:22px;overflow:hidden;position:relative;height:296px;box-shadow:0 0 0 2px #F6C445,0 18px 40px -12px rgba(0,0,0,.55)">
+            <video src="uploads/kham.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(110,15,24,.3),transparent 30%,transparent 68%,rgba(110,15,24,.5))"></div>
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div style="position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:shineSweep 4.5s ease-in-out infinite;animation-delay:.4s"></div></div>
+            <div style="position:absolute;inset:0;display:grid;place-items:center;pointer-events:none"><span style="direction:ltr;font-weight:700;font-size:19px;color:rgba(246,236,214,.5);letter-spacing:.5px;text-shadow:0 2px 8px rgba(0,0,0,.6)">@Taghvimghafasi</span></div>
+          </div>
+          <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 18px">
+            <div style="position:absolute;inset:0;display:grid;place-items:center;pointer-events:none"><div style="width:540px;height:540px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(246,196,69,.1) 0deg 3.5deg,transparent 3.5deg 11deg);-webkit-mask:radial-gradient(circle,#000 8%,transparent 60%);mask:radial-gradient(circle,#000 8%,transparent 60%);animation:spinSlow 60s linear infinite reverse"></div></div>
+            <div style="position:relative;text-align:center;font-weight:900;font-size:62px;line-height:.92;letter-spacing:-1.5px;color:#F4D08A;text-shadow:0 8px 30px rgba(0,0,0,.5)">امروز <span style="display:inline-block;font-size:96px;color:#F6C445;transform:rotate(-5deg) translateY(8px);animation:pulseGlow 2.4s ease-in-out infinite">۲</span> تیره؟</div>
+            <div style="position:relative;margin-top:16px;font-weight:500;font-size:17px;letter-spacing:2px;color:rgba(246,236,214,.7)">۲ تیر ۱۴۰۵</div>
+          </div>
+          <div style="padding:4px 24px 96px;display:flex;justify-content:center">
+            <button onClick="{{ share }}" style="display:flex;align-items:center;gap:12px;border:none;cursor:pointer;background:#F6C445;color:#4A0A10;font-family:'Vazirmatn';font-weight:900;font-size:19px;padding:16px 40px;border-radius:999px;box-shadow:0 14px 30px -8px rgba(246,196,69,.55);animation:floaty 2.8s ease-in-out infinite">
+              <span style="display:inline-block;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:13px solid #4A0A10"></span>
+              هم‌رسانی
+            </button>
+          </div>
+        </div>
+        <div data-toast style="position:absolute;left:50%;bottom:150px;transform:translate(-50%,10px);opacity:0;transition:all .32s cubic-bezier(.2,1.4,.4,1);background:#F6ECD6;color:#7A111B;font-weight:900;font-size:15px;padding:11px 22px;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.4);white-space:nowrap;z-index:35">لینک کپی شد ✓</div>
+      </div>
+
+      <!-- ===================== GENERATOR ===================== -->
+      <div data-view="make" style="position:absolute;inset:0;z-index:1;opacity:0;transform:scale(.985);pointer-events:none;transition:opacity .42s ease,transform .42s ease;padding-top:50px;display:flex;flex-direction:column;color:#F6ECD6">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 24px 10px">
+          <div style="font-weight:900;font-size:25px;letter-spacing:-.5px">کارت بساز</div>
+          <div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.55)">واکنش + متن خودت</div>
+        </div>
+        <div data-scroll style="flex:1;overflow-y:auto;padding:6px 22px 124px;display:flex;flex-direction:column;gap:20px">
+          <!-- live preview -->
+          <div style="position:relative;border-radius:22px;overflow:hidden;background:radial-gradient(120% 100% at 50% 0%,#8C1620,#5A0C13);box-shadow:0 0 0 2px #F6C445,0 18px 40px -14px rgba(0,0,0,.6);padding:16px 14px 22px">
+            <div style="position:relative;height:158px;border-radius:14px;overflow:hidden;background:repeating-linear-gradient(135deg,rgba(246,236,214,.16) 0 7px,rgba(246,236,214,.05) 7px 14px);display:grid;place-items:center">
+              <span data-gen-thumb style="font-family:'Vazirmatn';font-weight:700;font-size:13px;color:rgba(246,236,214,.7);letter-spacing:.5px">واکنش ۱</span>
+              <span style="position:absolute;bottom:8px;left:0;right:0;text-align:center;direction:ltr;font-weight:700;font-size:13px;color:rgba(246,236,214,.45)">@Taghvimghafasi</span>
+            </div>
+            <div style="text-align:center;margin-top:16px;font-weight:900;font-size:33px;line-height:1.04;letter-spacing:-1px;color:#F4D08A;text-shadow:0 6px 20px rgba(0,0,0,.45)">امروز <span data-gen-out style="color:#F6C445">تولدِ سارا</span>ه؟</div>
+          </div>
+          <!-- text input -->
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="font-weight:700;font-size:14px;color:rgba(246,236,214,.7)">موضوع رو بنویس</div>
+            <input data-gen-input value="تولدِ سارا" onInput="{{ onGenInput }}" placeholder="مثلاً: روزِ ملیِ گربه" style="width:100%;border:none;outline:none;border-radius:14px;padding:15px 18px;font-family:'Vazirmatn';font-weight:800;font-size:18px;direction:rtl;text-align:right;background:#F6ECD6;color:#5A0C13;box-shadow:0 8px 20px -8px rgba(0,0,0,.4)" />
+          </div>
+          <!-- gif library -->
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <div style="font-weight:700;font-size:14px;color:rgba(246,236,214,.7)">یک واکنش انتخاب کن</div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:11px">
+              <div data-gif="1" data-name="واکنش ۱" onClick="{{ selectGif }}" style="cursor:pointer;aspect-ratio:1;border-radius:13px;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 6px,rgba(246,236,214,.05) 6px 12px);display:grid;place-items:center;outline:3px solid #F6C445;box-shadow:0 8px 20px -6px rgba(0,0,0,.5);font-weight:700;font-size:12px;color:rgba(246,236,214,.8)">واکنش ۱</div>
+              <div data-gif="2" data-name="واکنش ۲" onClick="{{ selectGif }}" style="cursor:pointer;aspect-ratio:1;border-radius:13px;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 6px,rgba(246,236,214,.05) 6px 12px);display:grid;place-items:center;outline:none;font-weight:700;font-size:12px;color:rgba(246,236,214,.55)">واکنش ۲</div>
+              <div data-gif="3" data-name="واکنش ۳" onClick="{{ selectGif }}" style="cursor:pointer;aspect-ratio:1;border-radius:13px;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 6px,rgba(246,236,214,.05) 6px 12px);display:grid;place-items:center;outline:none;font-weight:700;font-size:12px;color:rgba(246,236,214,.55)">واکنش ۳</div>
+              <div data-gif="4" data-name="واکنش ۴" onClick="{{ selectGif }}" style="cursor:pointer;aspect-ratio:1;border-radius:13px;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 6px,rgba(246,236,214,.05) 6px 12px);display:grid;place-items:center;outline:none;font-weight:700;font-size:12px;color:rgba(246,236,214,.55)">واکنش ۴</div>
+              <div data-gif="5" data-name="واکنش ۵" onClick="{{ selectGif }}" style="cursor:pointer;aspect-ratio:1;border-radius:13px;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 6px,rgba(246,236,214,.05) 6px 12px);display:grid;place-items:center;outline:none;font-weight:700;font-size:12px;color:rgba(246,236,214,.55)">واکنش ۵</div>
+              <div data-gif="6" data-name="واکنش ۶" onClick="{{ selectGif }}" style="cursor:pointer;aspect-ratio:1;border-radius:13px;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 6px,rgba(246,236,214,.05) 6px 12px);display:grid;place-items:center;outline:none;font-weight:700;font-size:12px;color:rgba(246,236,214,.55)">واکنش ۶</div>
+            </div>
+          </div>
+          <button onClick="{{ share }}" style="margin-top:4px;border:none;cursor:pointer;background:#F6C445;color:#4A0A10;font-family:'Vazirmatn';font-weight:900;font-size:19px;padding:17px;border-radius:16px;box-shadow:0 14px 30px -8px rgba(246,196,69,.5)">بساز و بفرست</button>
+        </div>
+        <div data-toast style="position:absolute;left:50%;bottom:150px;transform:translate(-50%,10px);opacity:0;transition:all .32s cubic-bezier(.2,1.4,.4,1);background:#F6C445;color:#4A0A10;font-weight:900;font-size:15px;padding:11px 22px;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.4);white-space:nowrap;z-index:35">کارتت آماده‌ست ✓</div>
+      </div>
+
+      <!-- ===================== BIRTHDAYS ===================== -->
+      <div data-view="cake" style="position:absolute;inset:0;z-index:1;opacity:0;transform:scale(.985);pointer-events:none;transition:opacity .42s ease,transform .42s ease;padding-top:50px;display:flex;flex-direction:column;color:#F6ECD6">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;padding:14px 24px 10px">
+          <div style="font-weight:900;font-size:25px;letter-spacing:-.5px">تولدِ رفقا</div>
+          <div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.55)">۶ نفر</div>
+        </div>
+        <div data-scroll style="flex:1;overflow-y:auto;padding:6px 22px 124px;display:flex;flex-direction:column;gap:12px">
+          <!-- today -->
+          <div style="position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#F6C445,#E8A93A);color:#4A0A10;padding:18px 18px 16px;box-shadow:0 16px 34px -12px rgba(246,196,69,.6)">
+            <div style="position:absolute;inset:0;background:repeating-conic-gradient(from 0deg,rgba(90,12,19,.06) 0deg 4deg,transparent 4deg 12deg);-webkit-mask:radial-gradient(circle at 80% 0,#000,transparent 70%);mask:radial-gradient(circle at 80% 0,#000,transparent 70%)"></div>
+            <div style="position:relative;display:flex;align-items:center;gap:14px">
+              <div style="width:54px;height:54px;border-radius:50%;background:#4A0A10;display:grid;place-items:center;font-weight:900;font-size:22px;color:#F6C445;flex:none">آ</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-weight:800;font-size:13px;opacity:.7;margin-bottom:2px">امروز تولدِ آرشه؟ 🎉</div>
+                <div style="font-weight:900;font-size:23px;line-height:1">آرش</div>
+              </div>
+              <div style="font-weight:900;font-size:15px;background:#4A0A10;color:#F6C445;padding:7px 13px;border-radius:999px;flex:none">۲ تیر</div>
+            </div>
+            <button onClick="{{ goMake }}" style="position:relative;margin-top:14px;width:100%;border:none;cursor:pointer;background:#4A0A10;color:#F6C445;font-family:'Vazirmatn';font-weight:900;font-size:16px;padding:13px;border-radius:13px">کارتِ تولدش رو بساز</button>
+          </div>
+          <!-- others -->
+          <div style="display:flex;align-items:center;gap:14px;background:rgba(246,236,214,.07);border:1px solid rgba(246,236,214,.1);border-radius:18px;padding:14px 16px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(246,236,214,.16);display:grid;place-items:center;font-weight:900;font-size:19px;color:#F6ECD6;flex:none">س</div>
+            <div style="flex:1"><div style="font-weight:800;font-size:18px">سارا</div><div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.5)">۱۴ تیر — ۱۲ روز مونده</div></div>
+            <div style="font-weight:800;font-size:14px;color:#F6C445;background:rgba(246,196,69,.14);padding:6px 12px;border-radius:999px">۱۴ تیر</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:rgba(246,236,214,.07);border:1px solid rgba(246,236,214,.1);border-radius:18px;padding:14px 16px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(246,236,214,.16);display:grid;place-items:center;font-weight:900;font-size:19px;color:#F6ECD6;flex:none">ن</div>
+            <div style="flex:1"><div style="font-weight:800;font-size:18px">نگار</div><div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.5)">۲۸ مرداد</div></div>
+            <div style="font-weight:800;font-size:14px;color:#F6C445;background:rgba(246,196,69,.14);padding:6px 12px;border-radius:999px">۲۸ مرداد</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:rgba(246,236,214,.07);border:1px solid rgba(246,236,214,.1);border-radius:18px;padding:14px 16px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(246,236,214,.16);display:grid;place-items:center;font-weight:900;font-size:19px;color:#F6ECD6;flex:none">پ</div>
+            <div style="flex:1"><div style="font-weight:800;font-size:18px">پارسا</div><div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.5)">۵ مهر</div></div>
+            <div style="font-weight:800;font-size:14px;color:#F6C445;background:rgba(246,196,69,.14);padding:6px 12px;border-radius:999px">۵ مهر</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:rgba(246,236,214,.07);border:1px solid rgba(246,236,214,.1);border-radius:18px;padding:14px 16px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(246,236,214,.16);display:grid;place-items:center;font-weight:900;font-size:19px;color:#F6ECD6;flex:none">ر</div>
+            <div style="flex:1"><div style="font-weight:800;font-size:18px">رویا</div><div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.5)">۱۹ آبان</div></div>
+            <div style="font-weight:800;font-size:14px;color:#F6C445;background:rgba(246,196,69,.14);padding:6px 12px;border-radius:999px">۱۹ آبان</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;background:rgba(246,236,214,.07);border:1px solid rgba(246,236,214,.1);border-radius:18px;padding:14px 16px">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(246,236,214,.16);display:grid;place-items:center;font-weight:900;font-size:19px;color:#F6ECD6;flex:none">ک</div>
+            <div style="flex:1"><div style="font-weight:800;font-size:18px">کیان</div><div style="font-weight:500;font-size:13px;color:rgba(246,236,214,.5)">۳ اسفند</div></div>
+            <div style="font-weight:800;font-size:14px;color:#F6C445;background:rgba(246,196,69,.14);padding:6px 12px;border-radius:999px">۳ اسفند</div>
+          </div>
+          <button onClick="{{ share }}" style="margin-top:4px;border:1.5px dashed rgba(246,236,214,.35);cursor:pointer;background:transparent;color:#F6ECD6;font-family:'Vazirmatn';font-weight:800;font-size:16px;padding:15px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:8px">
+            <span style="font-size:20px;line-height:0;font-weight:400">＋</span> رفیقِ جدید
+          </button>
+        </div>
+        <div data-toast style="position:absolute;left:50%;bottom:150px;transform:translate(-50%,10px);opacity:0;transition:all .32s cubic-bezier(.2,1.4,.4,1);background:#F6ECD6;color:#7A111B;font-weight:900;font-size:15px;padding:11px 22px;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.4);white-space:nowrap;z-index:35">به‌زودی…</div>
+      </div>
+
+      <!-- ===================== ARCHIVE ===================== -->
+      <div data-view="archive" style="position:absolute;inset:0;z-index:1;opacity:0;transform:scale(.985);pointer-events:none;transition:opacity .42s ease,transform .42s ease;padding-top:50px;display:flex;flex-direction:column;color:#F6ECD6">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px 8px">
+          <div style="font-weight:900;font-size:25px;letter-spacing:-.5px">بایگانی</div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="font-weight:800;font-size:18px;color:rgba(246,236,214,.45)">‹</span>
+            <span style="font-weight:900;font-size:17px;color:#F6C445">تیر ۱۴۰۵</span>
+            <span style="font-weight:800;font-size:18px;color:rgba(246,236,214,.45)">›</span>
+          </div>
+        </div>
+        <div data-scroll style="flex:1;overflow-y:auto;padding:8px 20px 124px">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px">
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">ش</div>
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">ی</div>
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">د</div>
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">س</div>
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">چ</div>
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">پ</div>
+            <div style="text-align:center;font-weight:800;font-size:12px;color:rgba(246,236,214,.5);padding:4px 0">ج</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px">
+            <sc-for list="{{ days }}" as="d" hint-placeholder-count="33">
+              <div style="{{ d.cellStyle }}">
+                <div style="{{ d.thumbStyle }}"></div>
+                <span style="{{ d.numStyle }}">{{ d.num }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top:18px;display:flex;align-items:center;gap:9px;color:rgba(246,236,214,.5);font-weight:500;font-size:12px">
+            <span style="width:11px;height:11px;border-radius:3px;background:linear-gradient(160deg,#7A111B,#54090F);display:inline-block"></span> کارتِ منتشرشده
+            <span style="width:11px;height:11px;border-radius:3px;box-shadow:0 0 0 2px #F6C445 inset;display:inline-block;margin-right:8px"></span> امروز
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== NAV ===================== -->
+      <div style="position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:50;display:flex;gap:3px;background:rgba(40,7,9,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(246,236,214,.12);border-radius:999px;padding:5px;box-shadow:0 16px 36px -12px rgba(0,0,0,.7)">
+        <button data-nav="home" onClick="{{ goHome }}" style="border:none;cursor:pointer;font-family:'Vazirmatn';font-weight:800;font-size:14px;padding:10px 16px;border-radius:999px;background:#F6C445;color:#5A0C13;transition:all .25s ease">خانه</button>
+        <button data-nav="make" onClick="{{ goMake }}" style="border:none;cursor:pointer;font-family:'Vazirmatn';font-weight:800;font-size:14px;padding:10px 16px;border-radius:999px;background:transparent;color:rgba(246,236,214,.7);transition:all .25s ease">بساز</button>
+        <button data-nav="cake" onClick="{{ goCake }}" style="border:none;cursor:pointer;font-family:'Vazirmatn';font-weight:800;font-size:14px;padding:10px 16px;border-radius:999px;background:transparent;color:rgba(246,236,214,.7);transition:all .25s ease">تولدها</button>
+        <button data-nav="archive" onClick="{{ goArchive }}" style="border:none;cursor:pointer;font-family:'Vazirmatn';font-weight:800;font-size:14px;padding:10px 16px;border-radius:999px;background:transparent;color:rgba(246,236,214,.7);transition:all .25s ease">بایگانی</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;startScreen&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;home&quot;, &quot;make&quot;, &quot;cake&quot;, &quot;archive&quot;], &quot;default&quot;: &quot;home&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;autoSlap&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot; }
+}">
+class Component extends DCLogic {
+  state = { view: 'home' };
+  fa(n) { return String(n).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]); }
+
+  slap(el, delay) {
+    if (!el || !el.animate) return;
+    el.animate([
+      { transform: 'scale(1.22) rotate(-3deg)', filter: 'blur(12px)', offset: 0 },
+      { transform: 'scale(.97) rotate(.8deg)', filter: 'blur(0)', offset: .52 },
+      { transform: 'scale(1.02) rotate(-.4deg)', offset: .74 },
+      { transform: 'scale(1) rotate(0)', offset: 1 }
+    ], { duration: 820, delay: delay || 0, easing: 'cubic-bezier(.18,1.5,.4,1)', fill: 'none' });
+  }
+
+applyView(name) {
+    document.querySelectorAll('[data-view]').forEach(v => {
+      const on = v.getAttribute('data-view') === name;
+      v.style.opacity = on ? '1' : '0';
+      v.style.pointerEvents = on ? 'auto' : 'none';
+      v.style.transform = on ? 'scale(1)' : 'scale(.985)';
+      v.style.zIndex = on ? '2' : '1';
+    });
+    document.querySelectorAll('[data-nav]').forEach(b => {
+      const on = b.getAttribute('data-nav') === name;
+      b.style.background = on ? '#F6C445' : 'transparent';
+      b.style.color = on ? '#5A0C13' : 'rgba(246,236,214,.7)';
+    });
+  }
+
+  navigate(name) {
+    if (this.state.view === name) return;
+    this.setState({ view: name });
+    const sc = document.querySelector('[data-view="' + name + '"] [data-scroll]');
+    if (sc) sc.scrollTop = 0;
+    if (name === 'home') this.slap(document.querySelector('[data-view="home"] [data-screen]'), 40);
+  }
+
+  componentDidMount() {
+    const start = this.props.startScreen || 'home';
+    this.setState({ view: start });
+    this.applyView(start);
+    if (start === 'home' && this.props.autoSlap !== false) {
+      this.slap(document.querySelector('[data-view="home"] [data-screen]'), 120);
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.state.view) this.applyView(this.state.view);
+  }
+
+  toast(el) {
+    const v = el.closest('[data-view]');
+    const t = v && v.querySelector('[data-toast]');
+    if (!t) return;
+    t.style.opacity = '1';
+    t.style.transform = 'translate(-50%,0)';
+    clearTimeout(t._h);
+    t._h = setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translate(-50%,10px)'; }, 1600);
+  }
+
+  renderVals() {
+    const lead = 2, today = 2;
+    const days = [];
+    for (let i = 0; i < lead; i++) days.push({ blank: true, cellStyle: 'aspect-ratio:1;', thumbStyle: 'display:none', num: '' });
+    for (let n = 1; n <= 31; n++) {
+      const isToday = n === today, isPast = n < today, show = isPast || isToday;
+      days.push({
+        blank: false,
+        num: this.fa(n),
+        cellStyle: 'position:relative;border-radius:11px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:1;background:linear-gradient(160deg,#7A111B,#54090F);'
+          + (isToday ? 'box-shadow:0 0 0 2.5px #F6C445,0 8px 18px -6px rgba(0,0,0,.5);' : '')
+          + (show ? '' : 'opacity:.34;'),
+        thumbStyle: 'position:absolute;left:0;right:0;top:0;height:60%;background:repeating-linear-gradient(135deg,rgba(246,236,214,.18) 0 5px,rgba(246,236,214,.05) 5px 10px);' + (show ? '' : 'opacity:0;'),
+        numStyle: 'position:relative;z-index:2;font-weight:900;font-size:15px;padding:5px 0 6px;text-align:center;color:' + (isToday ? '#F6C445' : 'rgba(246,236,214,.92)') + ';'
+      });
+    }
+
+    const onGenInput = (e) => {
+      const out = document.querySelector('[data-gen-out]');
+      if (out) out.textContent = (e.target.value || '').trim() || '…';
+    };
+    const selectGif = (e) => {
+      const tile = e.currentTarget;
+      document.querySelectorAll('[data-gif]').forEach(t => {
+        t.style.outline = 'none'; t.style.boxShadow = ''; t.style.color = 'rgba(246,236,214,.55)';
+      });
+      tile.style.outline = '3px solid #F6C445';
+      tile.style.boxShadow = '0 8px 20px -6px rgba(0,0,0,.5)';
+      tile.style.color = 'rgba(246,236,214,.85)';
+      const thumb = document.querySelector('[data-gen-thumb]');
+      if (thumb) thumb.textContent = tile.getAttribute('data-name');
+    };
+
+    return {
+      days,
+      goHome: () => this.navigate('home'),
+      goMake: () => this.navigate('make'),
+      goCake: () => this.navigate('cake'),
+      goArchive: () => this.navigate('archive'),
+      share: (e) => { e.stopPropagation(); this.toast(e.currentTarget); },
+      onGenInput,
+      selectGif
+    };
+  }
+}
+</script>
+</body>
+</html>
