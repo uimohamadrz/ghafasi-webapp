@@ -1,0 +1,88 @@
+:root {
+  --ink: #14100e;
+  --cream: #f6ecd6;
+  --cream-dim: rgba(246, 236, 214, 0.55);
+  --cream-faint: rgba(246, 236, 214, 0.1);
+  --gold: #f6c445;
+  --gold-deep: #e8a93a;
+  --maroon-deep: #4a0a10;
+  --maroon: #5a0c13;
+  --maroon-mid: #7a111b;
+  --pomegranate-from: #8c1620;
+  --pomegranate-to: #6e0f18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--ink);
+}
+
+body {
+  background: radial-gradient(80% 60% at 50% 0%, #2a1010 0%, var(--ink) 62%);
+  font-family: 'Vazirmatn', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--cream);
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+button,
+input {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+input::placeholder {
+  color: rgba(90, 12, 19, 0.45);
+}
+
+.scrollHidden {
+  scrollbar-width: none;
+}
+
+.scrollHidden::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 0 currentColor); }
+  50% { filter: drop-shadow(0 6px 22px currentColor); }
+}
+
+@keyframes shineSweep {
+  0% { transform: translateX(-130%) skewX(-18deg); }
+  60%, 100% { transform: translateX(140%) skewX(-18deg); }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slapIn {
+  0% { transform: scale(1.26) rotate(-4deg); filter: blur(14px); }
+  52% { transform: scale(0.965) rotate(1deg); filter: blur(0); }
+  72% { transform: scale(1.025) rotate(-0.6deg); }
+  86% { transform: scale(0.992) rotate(0.2deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}

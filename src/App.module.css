@@ -1,0 +1,8 @@
+.shell {
+  position: relative;
+  min-height: 100dvh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: radial-gradient(130% 100% at 50% 0%, var(--pomegranate-from) 0%, var(--pomegranate-to) 70%);
+  direction: rtl;
+}

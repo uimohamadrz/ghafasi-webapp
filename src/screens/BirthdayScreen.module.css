@@ -1,0 +1,197 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100dvh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 22px 24px 10px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--cream-dim);
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 22px 124px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todayCard {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--maroon-deep);
+  padding: 18px 18px 16px;
+  box-shadow: 0 16px 34px -12px rgba(246, 196, 69, 0.6);
+}
+
+.todayCardGlow {
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(from 0deg, rgba(90, 12, 19, 0.06) 0deg 4deg, transparent 4deg 12deg);
+  -webkit-mask: radial-gradient(circle at 80% 0, #000, transparent 70%);
+  mask: radial-gradient(circle at 80% 0, #000, transparent 70%);
+}
+
+.todayCardRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatarDark {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--maroon-deep);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--gold);
+  flex: none;
+}
+
+.todayCardInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.todayCardSmall {
+  font-weight: 800;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+
+.todayCardName {
+  font-weight: 900;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.dateChipDark {
+  font-weight: 900;
+  font-size: 15px;
+  background: var(--maroon-deep);
+  color: var(--gold);
+  padding: 7px 13px;
+  border-radius: 999px;
+  flex: none;
+}
+
+.makeCardButton {
+  position: relative;
+  margin-top: 14px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background: var(--maroon-deep);
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 16px;
+  padding: 13px;
+  border-radius: 13px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(246, 236, 214, 0.07);
+  border: 1px solid var(--cream-faint);
+  border-radius: 18px;
+  padding: 14px 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(246, 236, 214, 0.16);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 19px;
+  color: var(--cream);
+  flex: none;
+}
+
+.rowInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.rowName {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.rowMeta {
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(246, 236, 214, 0.5);
+}
+
+.dateChip {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--gold);
+  background: rgba(246, 196, 69, 0.14);
+  padding: 6px 12px;
+  border-radius: 999px;
+  flex: none;
+}
+
+.deleteButton {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(246, 236, 214, 0.4);
+  font-size: 20px;
+  line-height: 1;
+  padding: 4px;
+  flex: none;
+}
+
+.addButton {
+  margin-top: 4px;
+  border: 1.5px dashed rgba(246, 236, 214, 0.35);
+  cursor: pointer;
+  background: transparent;
+  color: var(--cream);
+  font-weight: 800;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.plus {
+  font-size: 20px;
+  line-height: 0;
+  font-weight: 400;
+}

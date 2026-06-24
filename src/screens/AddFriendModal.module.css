@@ -1,0 +1,95 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 4, 3, 0.6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 60;
+}
+
+.sheet {
+  width: 100%;
+  max-width: 392px;
+  background: linear-gradient(160deg, #7a111b, #54090f);
+  border-radius: 24px 24px 0 0;
+  padding: 22px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 -20px 50px -10px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  color: var(--cream);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-weight: 800;
+  font-size: 17px;
+  direction: rtl;
+  text-align: right;
+  background: var(--cream);
+  color: var(--maroon);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.select {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  background: rgba(246, 236, 214, 0.12);
+  color: var(--cream);
+}
+
+.select option {
+  color: var(--maroon-deep);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.cancel,
+.confirm {
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 13px;
+  border-radius: 13px;
+}
+
+.cancel {
+  background: rgba(246, 236, 214, 0.1);
+  color: var(--cream);
+}
+
+.confirm {
+  background: var(--gold);
+  color: var(--maroon-deep);
+}
+
+.confirm:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

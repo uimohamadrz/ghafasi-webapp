@@ -1,0 +1,125 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100dvh;
+  position: relative;
+  padding-bottom: 96px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px 14px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brandName {
+  font-weight: 900;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--cream-dim);
+}
+
+.weekdayPill {
+  background: var(--cream);
+  color: var(--maroon-mid);
+  font-weight: 900;
+  font-size: 16px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.poster {
+  cursor: pointer;
+  margin: 6px 20px 0;
+  padding: 16px 18px 28px;
+  border-radius: 26px;
+  background: radial-gradient(120% 100% at 50% 0%, var(--pomegranate-from), var(--pomegranate-to));
+  animation: slapIn 0.82s cubic-bezier(0.18, 1.5, 0.4, 1);
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 8px 8px;
+  text-align: center;
+}
+
+.heroText {
+  position: relative;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  color: #f4d08a;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.heroNumber {
+  display: inline-block;
+  font-size: 86px;
+  color: var(--gold);
+  transform: rotate(-5deg) translateY(8px);
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+.dateLine {
+  position: relative;
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: var(--cream-dim);
+}
+
+.shareRow {
+  padding: 22px 24px 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+  background: var(--gold);
+  color: var(--maroon-deep);
+  font-weight: 900;
+  font-size: 19px;
+  padding: 16px 40px;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px -8px rgba(246, 196, 69, 0.55);
+  animation: floaty 2.8s ease-in-out infinite;
+}
+
+.shareButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.shareArrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 13px solid var(--maroon-deep);
+}

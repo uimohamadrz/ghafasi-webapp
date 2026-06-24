@@ -1,0 +1,21 @@
+.wrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.ring {
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(246, 196, 69, 0.1) 0deg 3.5deg,
+    transparent 3.5deg 11deg
+  );
+  -webkit-mask: radial-gradient(circle, #000 8%, transparent 60%);
+  mask: radial-gradient(circle, #000 8%, transparent 60%);
+  animation: spinSlow 60s linear infinite reverse;
+}

@@ -1,0 +1,16 @@
+.toast {
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translateX(-50%);
+  background: var(--cream);
+  color: var(--maroon-mid);
+  font-weight: 900;
+  font-size: 15px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+  z-index: 35;
+  animation: toastIn 0.32s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
