@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { MemeFrame } from '../components/MemeFrame';
 import { Toast } from '../components/Toast';
 import { useToast } from '../hooks/useToast';
 import { REACTION_TILES } from '../lib/reactions';
-import { shareCardImage } from '../lib/share';
+import { renderMemeVideo } from '../lib/renderVideo';
+import { shareVideoBlob } from '../lib/share';
 import styles from './GeneratorScreen.module.css';
 
 interface GeneratorScreenProps {
@@ -14,18 +15,18 @@ interface GeneratorScreenProps {
 }
 
 export function GeneratorScreen({ text, onTextChange, gifId, onSelectGif }: GeneratorScreenProps) {
-  const previewRef = useRef<HTMLDivElement>(null);
   const { toastMessage, showToast } = useToast();
   const [sharing, setSharing] = useState(false);
   const selectedTile = REACTION_TILES.find((t) => t.id === gifId) ?? REACTION_TILES[0];
   const displayText = text.trim() || '…';
 
   async function handleGenerate() {
-    if (sharing || !previewRef.current) return;
+    if (sharing) return;
     setSharing(true);
     try {
-      const outcome = await shareCardImage(previewRef.current, {
-        filename: 'kart.png',
+      const blob = await renderMemeVideo(`امروز ${displayText}ه؟`);
+      const outcome = await shareVideoBlob(blob, {
+        filename: 'kham.mp4',
         title: 'تقویم قفسی',
         text: `امروز ${displayText}ه؟`,
       });
@@ -36,6 +37,8 @@ export function GeneratorScreen({ text, onTextChange, gifId, onSelectGif }: Gene
         failed: 'نشد، دوباره بزن',
       };
       showToast(messages[outcome]);
+    } catch {
+      showToast('نشد، دوباره بزن');
     } finally {
       setSharing(false);
     }
@@ -49,7 +52,7 @@ export function GeneratorScreen({ text, onTextChange, gifId, onSelectGif }: Gene
       </div>
 
       <div className={`${styles.scroll} scrollHidden`}>
-        <div ref={previewRef} className={styles.preview}>
+        <div className={styles.preview}>
           <MemeFrame placeholderLabel={selectedTile.label} height={158} />
           <div className={styles.previewText}>
             امروز <span className={styles.previewHighlight}>{displayText}</span>ه؟
@@ -83,7 +86,7 @@ export function GeneratorScreen({ text, onTextChange, gifId, onSelectGif }: Gene
         </div>
 
         <button type="button" className={styles.generateButton} onClick={handleGenerate} disabled={sharing}>
-          بساز و بفرست
+          {sharing ? 'در حال ساخت ویدیو…' : 'بساز و بفرست'}
         </button>
       </div>
 

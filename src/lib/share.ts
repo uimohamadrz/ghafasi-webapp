@@ -41,6 +41,34 @@ function freezeVideos(node: HTMLElement): () => void {
   return () => restores.forEach((restore) => restore());
 }
 
+export async function shareVideoBlob(blob: Blob, opts: ShareOptions): Promise<ShareOutcome> {
+  const file = new File([blob], opts.filename, { type: 'video/mp4' });
+
+  const nav = navigator as Navigator & { canShare?: (data?: ShareData) => boolean };
+  if (nav.canShare?.({ files: [file] }) && navigator.share) {
+    try {
+      await navigator.share({ files: [file], title: opts.title, text: opts.text });
+      return 'shared';
+    } catch (err) {
+      if ((err as Error)?.name === 'AbortError') return 'failed';
+    }
+  }
+
+  try {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = opts.filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    return 'downloaded';
+  } catch {
+    return 'failed';
+  }
+}
+
 export async function shareCardImage(node: HTMLElement, opts: ShareOptions): Promise<ShareOutcome> {
   const unfreeze = freezeVideos(node);
   let blob: Blob | null = null;
